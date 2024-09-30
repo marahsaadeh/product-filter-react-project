@@ -1,0 +1,131 @@
+/* ========================
+ table of contents
+===========================
+1. Left Section ==> Filter Buttons
+2. Right Section ==> Product Cards
+*/
+
+main.flex {
+  display: flex;
+  gap: 2.64rem;
+  align-items: start;
+  padding: 8px;
+}
+
+/* ===============================
+   1. Left Section ==> Filter Buttons
+================================== */
+main section.left-section.flex {
+  /* Flex Box: To make the buttons come vertically underneath each other*/
+  flex-direction: column;
+  /*Distance between buttons*/
+  gap: 10px;
+}
+
+main section.left-section.flex button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+main section.left-section.flex button:hover {
+  opacity: 1;
+}
+
+main section.left-section.flex button.active {
+  opacity: 1;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  padding: 0.8rem 0;
+  border: 1px solid var(--blue);
+}
+
+.light main section.left-section.flex button.active {
+  border: 1px solid #000;
+}
+
+/* ===============================
+   2. Right Section ==> Product Cards
+================================== */
+
+main section.right-section.flex {
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+  column-gap: 16px;
+  row-gap: 2rem;
+}
+
+.card {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
+  border: 1px solid #D07C57;
+  border-radius: 5px;
+  transition: 0.3s;
+  background:rgba(255, 255, 255, 0.04);
+  
+}
+.category {
+  font-style: italic; 
+  font-weight: bold;  
+  color: #D7B2AC;       
+}
+
+.light .card,
+.light .card:hover {
+  border: none;
+}
+
+.card:hover {
+  border: 1px solid var(--blue);
+  rotate: 1deg;
+  scale: 1.01;
+  cursor: pointer;
+}
+
+.card img {
+  border-radius: 5px;
+}
+
+.card .box {
+  padding: 1rem 0.4rem;
+}
+
+.card .box .title {
+  color: var(--title);
+  text-transform: capitalize;
+}
+
+.card .box .sub-title {
+  color: var(--subtitle);
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+
+.image-container {
+  width: 266px; 
+  height: 186px; 
+  /* Hide extra parts */
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container img {
+  /* Display fit */
+  width: 100%; 
+  height: auto; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  /* Image Center */
+  transform: translate(-50%, -50%);
+}
+

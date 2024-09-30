@@ -1,0 +1,14 @@
+.footer {
+  background-color: #2C3E50;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
